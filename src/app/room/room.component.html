@@ -1,0 +1,28 @@
+
+<div class="four wide column center aligned price">
+  <div class="ui statistic">
+    <div class="value">
+      {{room.roomNumber}}
+    </div>
+    <div class="label">
+      Room number
+    </div>
+  </div>
+</div>
+<div class="twelve wide column">
+  <h4 class="ui large header">
+    Room price: {{ room.roomPrice }}
+  </h4>
+  <ul class="ui big horizontal list voters">
+    <li class="item">
+      <button (click)="changeRoom()" class="ui positive basic button">
+        Change room
+      </button>
+    </li>
+    <li class="item">
+      <button (click)="deleteRoom()" class="ui negative basic button">
+        Delete
+      </button>
+    </li>
+  </ul>
+</div>
