@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
+import { RoomService } from './services/room.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { RoomComponent } from './room/room.component';
-import { FilterPipePipe } from './helpers/filter-pipe.pipe'
+import { FilterPipePipe } from './helpers/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -13,9 +16,13 @@ import { FilterPipePipe } from './helpers/filter-pipe.pipe'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    RoomService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
